@@ -1,0 +1,47 @@
+.main-header	{
+  @include text-pattern($margin: auto, $padding: 15px 5px);
+	width: 100%;
+}
+
+/*-- navigation --*/
+
+.main-nav {
+  @include text-pattern($padding: 0);
+  li	{
+    @include text-pattern($margin: 20px);
+  }
+  a	{
+    @extend %center-text;
+    @include text-pattern($padding: 10px 15px, $font-s: 1rem, $font-w: 800);
+    text-transform: uppercase;
+    display: block;
+  }
+  
+  @media (min-width: $brk-768px)  {
+    &	{
+      text-align: center;
+      li	{
+        display: inline-block;
+        @include text-pattern($margin: 0 auto);
+		  }
+    }
+  }
+  @media (min-width: $brk-1024px) {
+    &,
+    & li	{
+      display: inline-block;
+    }
+    &	{
+		  float: right;
+      li	{
+        @include text-pattern($margin: 0 15px);
+      }
+    }
+  }
+  @media (min-width: $brk-1300px) {
+    .main-nav	{
+      @include text-pattern($margin: 40px);
+    }
+  }
+}
+

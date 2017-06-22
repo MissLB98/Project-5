@@ -1,0 +1,67 @@
+.contact-heading	{
+  @include text-pattern($margin: 15px, $font-s: 1.2em);
+}
+
+.main-footer	{
+  @extend %center-text;
+  @extend %clearfix;
+  @include text-pattern($padding: 2em 0 0 0, $margin: 30px auto 0 auto);
+	width: 90%;
+  p a	{
+    @include text-pattern($font-w: bold);
+  }
+  
+  @media (min-width: $brk-768px) {
+    span	{
+      display: none;
+    }
+  }
+}
+
+.to-top	{
+  @include text-pattern($padding: 0 10px, $font-w: 800, $font-s: 1em, $margin: 10px 10px);
+	float: right;
+	text-transform: uppercase;
+}
+
+.student-name	{
+  @include text-pattern($padding: 0, $margin: 10px 10px, $font-s: 1rem, $font-w: 800);
+	float: left;
+  
+  @media (min-width: $brk-768px) {
+    &	{
+      @include text-pattern($padding: 20px 0 0 0);
+    }
+  }
+  @media (min-width: $brk-1024px) {
+    &	{
+      @include text-pattern($padding: 45px 0 0 0);
+		}
+  }
+}
+
+/*---- bottom nav ----*/
+.bottom-nav {
+  display: none;
+  
+  @media (min-width: $brk-768px) {
+    & {
+      @include text-pattern($font-w: bolder, $font-s: 1rem);
+      float: right;
+    }
+    
+    &,
+    & li	{
+      @include text-pattern($padding: 10px, $margin: 5px);
+      display: inline-block;
+    }
+  }
+  @media (min-width: $brk-1024px) {
+    &,
+    & li	{
+      @include text-pattern($padding: 20px, $margin: 5px);
+      display: inline-block;
+    }
+  }
+}
+

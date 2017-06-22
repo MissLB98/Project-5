@@ -1,0 +1,80 @@
+main	{
+  @extend %clearfix;
+  @extend %center-text;
+  @include text-pattern($padding: 0 0 50px 0, $margin: 0 auto);
+  @media (min-width: $brk-768px) {
+    div.container	{
+      clear: both;
+      border-top: 1px solid $grey;
+      h2.h2-portfolio	{
+        @include text-pattern($padding: 10px 0, $font-s: 1.2em);
+      }
+      .primary	{
+        float: left;
+        width: 50%;
+        .portfolio-items p	{
+		      @include text-pattern($padding: 5px);
+        }
+      }
+      .secondary	{
+        float: right;
+        width: 50%;
+        .portfolio-items p	{
+		      @include text-pattern($padding: 5px);
+        }
+      }
+    }
+    .intro p	{
+      @include text-pattern($padding: 70px 15px 5px 0);
+      float: left;
+      width: 60%;
+      text-align: justify;
+    }
+  }
+  @media (min-width: $brk-1024px) {
+    .col	{
+      display: none;
+    }
+    .portfolio-items	{
+      float: left;
+      max-width: 33.33%;
+    }
+  }
+}
+
+.DesktopContainer	{
+	display: none;
+  @media (min-width: $brk-1024px) {
+    &	{
+		  display: inline-block;
+      p	{
+        @include text-pattern($padding: 5px, $font-s: 14px);
+      }
+    }
+  }
+}
+
+/*-- Extra Section --*/
+
+.extra-section	{
+  @extend %center-text;
+  @include text-pattern($padding: 2px, $margin: 20px auto 0 auto, $color: $white);
+	background: $color-section-bg;
+	width: 80%;
+	border-radius: 20%;
+  li	{
+    @include text-pattern($padding: 5px, $margin: 5px);
+    display: block;
+    border-radius: 50%;
+    transition: all .4s;
+    &:hover	{
+      @include text-pattern($color: $black, $font-w: 800);
+      transform: scale(1.2) rotatey(330deg) rotatex(360deg);
+    }
+  }
+  h2	{
+    @include text-pattern($padding: 10px, $margin: 0, $font-s: 2.3em);
+    font-family: $font-stack-secondary;
+    letter-spacing: 2px;
+  }
+}

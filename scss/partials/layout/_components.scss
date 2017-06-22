@@ -1,0 +1,35 @@
+.profile-image	{
+  @include text-pattern($margin: 0 auto, $padding: 10px);
+	width: 250px;
+  display: block;
+	border: 1px solid $grey;
+  @media (min-width: $brk-768px)  {
+    &	{
+      @include text-pattern($margin: 0);
+      float: right;
+    }
+  }
+  @media (min-width: $brk-1300px) {
+    &	{
+      @include text-pattern($margin: 0 40px 0 0);
+    }
+  }
+}
+
+.name	{
+  @extend %center-text;
+  @include text-pattern($margin: 20px, $color: $color-name, $font-s: 1.75em, $font-w: 800);
+	font-family: $font-stack-secondary;
+	text-shadow: -5px 5px 1px $grey;
+  
+  @media (min-width: $brk-768px) {
+    &	{
+      @include text-pattern($margin: 0);
+    }
+  }
+  @media (min-width: $brk-1024px) {
+    & {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+*	{
+	box-sizing: border-box;
+  @include text-pattern($margin: 0);
+}
+
+body	{
+  @include text-pattern($margin: 0 auto, $padding: 0, $color: $color-body);
+	font-family: $font-stack-primary;
+	line-height: 1.5;
+  @media (min-width: $brk-768px)  {
+    .wrap	{
+      @include text-pattern($margin: 0 auto);
+      width: 90%;
+    }
+  }
+}
+
+p	{
+  @include text-pattern($margin: 0, $padding: 20px, $font-s: .95em);
+}
+
+h2,
+h3	{
+  @extend %center-text;
+	@include text-pattern($margin: 0);
+}
+
+h2	{
+  @include text-pattern($margin: 50px 0, $font-s: 1rem, $font-w: 800);
+}
+
+h3	{
+	@include text-pattern($margin: 20px 0 0 0);
+}
+
+img	{
+  @include text-pattern($padding: 20px);
+	width: 100%;
+	max-width: 500px;
+  @media (min-width: $brk-768px)  {
+    &	{
+      @include text-pattern($margin: 0, $padding: 5px);
+      max-width: 691.2px;
+	  }
+  }
+}
+
+ul  {
+  @include text-pattern($padding: 0);
+	list-style: none;
+}
+
+
+//links
+a	{
+  @include text-pattern($color: $black);
+	text-decoration: none;
+}
+
+a:hover	{
+	border-bottom: 3px solid $darkRed;
+}

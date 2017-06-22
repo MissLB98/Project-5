@@ -1,0 +1,49 @@
+//Colors 
+$color-body           : #5a5a5a;
+$color-name           : #36a9ff;
+
+$color-section-bg     : #a99a55;
+$border               :    #ccc;
+
+$white                :    #fff;
+$black                :    #000;
+$grey                 :    #ccc;
+$darkRed              : #670000;
+
+//Fonts
+$font-stack-primary   : 'Open Sans', sans-serif;
+$font-stack-secondary : 'Monoton', sans-serif;
+
+//Media Query breakpoints
+$brk-768px            :  768px;
+$brk-1024px           : 1024px;
+$brk-1300px           : 1300px;
+
+
+//Placeholders
+%center-text  {
+  text-align: center;
+}
+%clearfix {
+  &::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+}
+
+//Mixins
+@mixin text-pattern(
+  $margin: null,
+  $padding: null,
+  $font-s: null,
+  $font-w: null,
+  $color: null
+  ) {
+  margin: $margin;
+  padding: $padding;
+  font-size: $font-s,;
+  font-weight: $font-w,;
+  color: $color;
+}
+
